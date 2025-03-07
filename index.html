@@ -1,1 +1,55 @@
-<h1>Its working!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar with Pico CSS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--background-color);
+            padding: 0.5rem 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            padding: 4rem 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>test</h1>
+    <nav>
+        <ul>
+            <li><strong>My Website</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="home">
+            <h2>Welcome to My Website</h2>
+            <p>This is a modern website using Pico CSS.</p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We create elegant, minimalist web designs.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We provide high-quality web solutions.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch for amazing web projects.</p>
+        </section>
+    </main>
+</body>
+</html>
