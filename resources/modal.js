@@ -17,7 +17,7 @@ let visibleModal = null;
 const toggleModal = (event) => {
   if (event) event.preventDefault();
 
-  let src = event?.currentTarget?.dataset?.target;
+  let src = event?.currentTarget?.src;
   const modal = document.getElementById("modal");
   if (!modal) return;
 
