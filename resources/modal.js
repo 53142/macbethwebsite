@@ -15,61 +15,78 @@ let visibleModal = null;
 
 // Toggle modal
 const toggleModal = (event) => {
-  event.preventDefault();
-  const modal = document.getElementById(event.currentTarget.dataset.target);
+  if (event) event.preventDefault();
+
+  let src = event?.currentTarget?.dataset?.target;
+  const modal = document.getElementById("modal");
   if (!modal) return;
-  modal && (modal.open ? closeModal(modal) : openModal(modal));
+
+  modal.open ? closeModal() : openModal(modal, src);
 };
 
 // Open modal
-const openModal = (modal) => {
+const openModal = (modal, src) => {
   const { documentElement: html } = document;
   const scrollbarWidth = getScrollbarWidth();
+
+  modal.innerHTML = `
+    <article style="max-width: 90vw; max-height: 90vh; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <img src="${src}" alt="Macbeth and Banquo with the Witches" style="max-width: 100%; height: auto; border-radius: var(--border-radius);">
+      <button aria-label="Close" rel="prev" data-target="modal" style="margin: 20px; padding: 10px 15px;">Close</button>
+    </article>
+  `;
+
+  const button = modal.querySelector("button");
+  if (button) {
+    button.addEventListener("click", toggleModal);
+  }
+
   if (scrollbarWidth) {
     html.style.setProperty(scrollbarWidthCssVar, `${scrollbarWidth}px`);
   }
+
   html.classList.add(isOpenClass, openingClass);
   setTimeout(() => {
     visibleModal = modal;
     html.classList.remove(openingClass);
   }, animationDuration);
+
   modal.showModal();
 };
 
 // Close modal
-const closeModal = (modal) => {
-  visibleModal = null;
+const closeModal = () => {
+  if (!visibleModal) return;
+
   const { documentElement: html } = document;
   html.classList.add(closingClass);
+  
   setTimeout(() => {
     html.classList.remove(closingClass, isOpenClass);
     html.style.removeProperty(scrollbarWidthCssVar);
-    modal.close();
+    visibleModal.close();
+    visibleModal = null;
   }, animationDuration);
 };
 
 // Close with a click outside
 document.addEventListener("click", (event) => {
-  if (visibleModal === null) return;
+  if (!visibleModal) return;
   const modalContent = visibleModal.querySelector("article");
-  const isClickInside = modalContent.contains(event.target);
-  !isClickInside && closeModal(visibleModal);
+  if (!modalContent.contains(event.target)) {
+    closeModal();
+  }
 });
 
 // Close with Esc key
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && visibleModal) {
-    closeModal(visibleModal);
+    closeModal();
   }
 });
 
 // Get scrollbar width
-const getScrollbarWidth = () => {
-  const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-  return scrollbarWidth;
-};
+const getScrollbarWidth = () => window.innerWidth - document.documentElement.clientWidth;
 
 // Is scrollbar visible
-const isScrollbarVisible = () => {
-  return document.body.scrollHeight > screen.height;
-};
+const isScrollbarVisible = () => document.body.scrollHeight > window.innerHeight;
