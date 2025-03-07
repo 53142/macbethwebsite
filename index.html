@@ -52,23 +52,6 @@
             margin-top: 0.5rem;
             max-width: 400px;
         }
-        .fullscreen-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(10px);
-        }
-        .fullscreen-overlay img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
-        }
     </style>
 </head>
 <body>
@@ -117,33 +100,15 @@
     </main>
     <dialog id="modal-example">
         <article>
-          <header>
-            <button
-              aria-label="Close"
-              rel="prev"
-              data-target="modal-example"
-              onclick="toggleModal(event)"
-            ></button>
-            <h3>Confirm your action!</h3>
-          </header>
-          <p>
-            Cras sit amet maximus risus. Pellentesque sodales odio sit amet augue finibus
-            pellentesque. Nullam finibus risus non semper euismod.
-          </p>
-          <footer>
-            <button
-              role="button"
-              class="secondary"
-              data-target="modal-example"
-              onclick="toggleModal(event)"
-            >
-              Cancel</button
-            ><button autofocus data-target="modal-example" onclick="toggleModal(event)">
-              Confirm
+            <img src="resources/media/MacbethAndBanquo-Witches.jpg" alt="Macbeth and Banquo with the Witches">
+            <button 
+                aria-label="Close"
+                rel="prev"
+                data-target="modal-example"
+                onclick="toggleModal(event)">Close
             </button>
-          </footer>
         </article>
-      </dialog>
+    </dialog>
     <script src="resources/modal.js"></script>
 </body>
 </html>
