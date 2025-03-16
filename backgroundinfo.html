@@ -23,19 +23,38 @@
     
     <main>
         <section>
-            <h2>Background Information</h2>
-            <h3>First Performance</h3>
-            <p>The play was first performed in 1606, as a private performance for King James, at Hampton Court. This is surprising because it was played for the king as the main character of the play kills the king.</p>
-            <h3>Play Breakdown</h3>
-            <p>The play is about a man who saves the king's crown from a battle but is then told by three witches that he will eventually become king. Soon after he returned the crown to the king, he killed the king and became king himself. However, after his success, he becomes power hungry and gets himself killed by the previous king's son.</p>
-            <h3>Superstitions</h3>
-            <p>The play is said to be cursed because many dangerous and even deadly events have happened during the production of the play over the years. These events include mysterious deaths, riots, falling stage props, and the accidental use of real knives. The oldest rumor of these occurrences was at the first showing for the king where the young actor playing Lady Macbeth mysteriously died mid-way through the play and apparently their role had to be played by Shakespeare himself. A main superstition is that the play was cursed by real witches that were angry that he used real incantations in the play.</p>
-        </section>
-        <section>
+            <h1>Background Information</h1>
+            <section>
+                <h2>First Performance</h2>
+                <p>The first public performance of Macbeth was at the outdoor Globe Theatre in April 1611 dated by an eyewitness account of Dr. Simon Forman. However, Macbeth was likely first performed prior to this account in 1606, as a private performance for King James, at Hampton Court.</p>
+                <div class="content">
+                    <div class="image-container">
+                        <img id="thumbnail" src="resources/media/Great_Gate,_Hampton_Court_Palace.jpg" alt="Hampton Court Palace" onclick="toggleModal(event)">
+                    </div>
+                    <div>
+                        <p>A picture of the Hampton Court Palace where Macbeth was likely originally performed for King James I of England.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>The Play</h3>
+                <p>Macbeth is about a man who saves the king's crown from a battle but is then told by three witches that he will eventually become king. Soon after he returned the crown to the king, he killed the king and became king himself. However, after his success, he becomes power hungry and gets himself killed by the previous king's son.</p>
+                <div class="content">
+                    <div class="image-container">
+                        <img id="thumbnail" src="resources/media/MacbethAndBanquo-Witches.jpg" alt="3 Witches in Macbeth" onclick="toggleModal(event)">
+                    </div>
+                    <div>
+                        <p>A painting showing the three witches in Macbeth.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Superstitions</h3>
+                <p>Macbeth is said to be cursed because many dangerous and even deadly events have happened during the production of the play over the years. This is because Shakespeare is said to have used the spells of real witches in his text, angering the witches, prompting them to curse the play. Events like mysterious deaths, riots, falling stage props, and the accidental use of real knives are attributed to this "curse". The oldest rumor of these occurrences was at the first showing for the king where the young actor playing Lady Macbeth mysteriously died mid-way through the play and their role had to be played by Shakespeare himself. As a result of this superstition, many people believe it is bad luck to refer to <em>Macbeth</em> by name in a theater so they simply refer to it as <em>The Scottish Play</em>.</p>
+            </section>
             <div class="content"></p>
                 <div class="image-container">
                     <img id="thumbnail" src="resources/media/globetheater.jpg" alt="Image of Globe Theater" onclick="toggleModal(event)">
-                    <p class="caption">citation</p>
                 </div>
                 <div>
                     <h3>Globe Theater</h3>
@@ -45,13 +64,15 @@
             <div class="content">
                 <div class="image-container">
                     <img id="thumbnail" src="resources/media/James_VI_and_I.jpg" alt="King James I of England" onclick="toggleModal(event)">
-                    <p class="caption">citation</p>
+                </div>
+                <div>
+                    <h3>King James I of England</h3>
+                    <p>Many aspects of <em>Macbeth</em> reference King James I and many people believe Shakespeare wrote it as a tribute to King James I.</p>
                 </div>
             </div>
         </section>
     </main>
-    <dialog id="modal">
-    </dialog>
+    <dialog id="modal"></dialog>
     <script src="resources/modal.js"></script>
 </body>
 </html>
