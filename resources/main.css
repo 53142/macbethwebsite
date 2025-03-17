@@ -10,7 +10,14 @@ nav {
 }
 section {
     padding: 4rem 1rem;
+    text-align: center;
 }
+
+ul {
+    display: inline-block;
+    text-align: left;
+}
+
 .content {
     display: flex;
     align-items: center;
