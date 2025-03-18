@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macbeth Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="resources/main.css">
+</head>
+<body>
+    <br>
+    <nav>
+        <ul>
+            <li><strong>Macbeth Website</strong></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="backgroundinfo.html">Background Information</a></li>
+            <li><a href="politics.html">Politics</a></li>
+            <li><a href="purpose.html">Purpose</a></li>
+            <li><a href="inspiration.html">Inspiration</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Prior Works</h2>
+            <p>In Macbeth, Shakespeare took inspiration from existing historical sources and literary works. Among the most notable influences on Macbeth was the <em>Chronicles of England, Scotland, and Ireland</em> by Raphael Holinshed. This work described the reigns of various monarchs in British history. Shakespeare based the Macbeth character off the Macbeth mentioned in Holinshed's work.</p>
+            <div class="content">
+                <div class="image-container">
+                    <img id="thumbnail" src="resources/media/575px-1577_printing_of_Holinshed's_Chronicles.jpg" alt="Holinshed's Chronicles" onclick="toggleModal(event)">
+                </div>
+                <div>
+                    <p>A photo of the first edition of Raphael Holinshed's <em>Chronicles of England, Scotland, and Ireland</em> published in 1577.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>King James I</h2>
+            <p>King James I, a major monarch during Shakespeare's time, was a significant influence on Macbeth. Since, James I was a big supporter of Shakespeare's acting company, James' interests and beliefs had large impacts on the play. James I's fascination with witchcraft and the supernatural, as shown in his book <em>Deamonologie</em>, which encouraged the practice of witch hunting, is demonstrated through the depiction of magic and witches in Macbeth.</p>
+            <p>Furthermore, Macbeth was likely created to appeal to James I's lineage. <em>Banquo</em>, who is portrayed in Macbeth as noble and virtuous, was believed to be an ancestor of the <em>Stuart</em> line which King James belonged to. By depicting Banquo favorably, Shakespeare flattered the king and reinforced the legitimacy of James I as the ruler of England and Scotland.</p>
+            <div class="content">
+                <div class="image-container">
+                    <img id="thumbnail" src="resources/media/533px-JamesIEngland.jpg" alt="James I of England" onclick="toggleModal(event)">
+                </div>
+                <div>
+                    <p>A portrait of King James I of England who had a significant influence on Shakespeare and Macbeth.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <dialog id="modal"></dialog>
+    <script src="resources/modal.js"></script>
+</body>
+</html>
