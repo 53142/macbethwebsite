@@ -31,7 +31,7 @@ const openModal = (modal, src) => {
 
   modal.innerHTML = `
     <article style="max-width: 90vw; max-height: 90vh; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center;">
-      <img src="${src}" alt="Macbeth and Banquo with the Witches" style="max-width: 100%; height: auto; border-radius: var(--border-radius);">
+      <img src="${src}" alt="Macbeth and Banquo with the Witches" style="max-width: 80%; height: auto; border-radius: var(--border-radius);">
       <button aria-label="Close" rel="prev" data-target="modal" style="margin: 20px; padding: 10px 15px;">Close</button>
     </article>
   `;
